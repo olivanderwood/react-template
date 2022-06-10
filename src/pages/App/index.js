@@ -1,5 +1,5 @@
-import logo from '../../assets/logo.svg';
-import './styles.scss';
+import logo from "../../assets/logo.svg";
+import "./styles.scss";
 
 function App() {
   console.log(process.env.NODE_ENV);
@@ -7,9 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
         <a
           className="App-link"
           href="https://reactjs.org"

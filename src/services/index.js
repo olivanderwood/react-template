@@ -1,2 +1,2 @@
-export { default as AuthenManager } from './AuthenManager'
-export { default as axiosInstance } from './axiosInstance'
+export { default as AuthenManager } from "./AuthenManager";
+export { default as axiosInstance } from "./axiosInstance";

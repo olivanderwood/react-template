@@ -1,51 +1,49 @@
-import Cookies from 'js-cookie'
+import Cookies from "js-cookie";
 
 class Authen {
-    token = '';
+  token = "";
 
-    constructor(token) {
-        this.token = token
-    }
+  constructor(token) {
+    this.token = token;
+  }
 
-    setToken(token) {
-        this.token = token
-    }
+  setToken(token) {
+    this.token = token;
+  }
 
-    getToken() {
-        return this.token
-    }
+  getToken() {
+    return this.token;
+  }
 
-    clear() {
-        this.token = ''
-    }
-
+  clear() {
+    this.token = "";
+  }
 }
 
 let AuthenManager = (function () {
-    let instance
-    let token = Cookies.get('user_auth')?.toString() || '';
+  let instance;
+  let token = Cookies.get("user_auth")?.toString() || "";
 
-    function init() {
-        return new Authen(token);
-    }
+  function init() {
+    return new Authen(token);
+  }
 
-    function clearCache() {
-        instance.clear()
-    }
+  function clearCache() {
+    instance.clear();
+  }
 
-    return {
-        shared: function () {
-            if (!instance) {
-                instance = init();
-            }
-            return instance;
-        },
+  return {
+    shared: function () {
+      if (!instance) {
+        instance = init();
+      }
+      return instance;
+    },
 
-        clear: function () {
-            clearCache();
-        }
-    }
+    clear: function () {
+      clearCache();
+    },
+  };
 })();
-
 
 export default AuthenManager;
