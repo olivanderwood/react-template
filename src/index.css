@@ -16,8 +16,7 @@ code {
     monospace;
 }
 
-
 .\[appearance\:textfield\] {
   -webkit-appearance: textfield;
-          appearance: textfield;
+  appearance: textfield;
 }
