@@ -1,0 +1,31 @@
+image: node:16
+
+stages:
+  - deploy staging
+  - deploy production
+
+deploy_stg_stage:
+  stage: deploy staging
+  environment:
+    name: deploystaging
+  only:
+    - deploy_staging
+  tags:
+    - staging
+  script:
+    - npm i
+    - npm run build:staging
+
+deploy_prod_stage:
+  stage: deploy production
+  environment:
+    name: deployProduction
+  only:
+    - production
+  when: manual
+  tags:
+    - production
+
+  script:
+    - npm i
+    - npm run build:production
