@@ -1,7 +1,6 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import Routes from "./routes";
 import store from "./store";
 import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
@@ -9,6 +8,10 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const App = () => {
+  return <Routes />;
+};
 root.render(
   <Provider store={store}>
     <App />
