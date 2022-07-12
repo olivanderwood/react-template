@@ -9,6 +9,7 @@ class Authen {
 
   setToken(token: string) {
     this.token = token;
+    Cookies.set("user_auth", token);
   }
 
   getToken() {
@@ -17,6 +18,7 @@ class Authen {
 
   clear() {
     this.token = "";
+    Cookies.remove("user_auth");
   }
 }
 
